@@ -135,10 +135,14 @@ public class hw2 {
             element3 = arr3.length > i ? arr3[i] : 0;
             totalArr[i] = element1 + element2 + element3;
         }
-        System.out.println(Arrays.toString(arr1) + " + " + Arrays.toString(arr2) + " + " + Arrays.toString(arr3) + " = " + Arrays.toString(totalArr));
+        System.out.println(Arrays.toString(arr1) + " +\n" + Arrays.toString(arr2) + " +\n" + Arrays.toString(arr3) + " =\n" + Arrays.toString(totalArr));
     }
 
-    //Метод 5. Определяет какая часть массива больше, левая или правая. Выводит результат
+    /*
+    Метод 5. Определяет какая часть массива больше, левая или правая. Выводит результат
+    Если в массиве нечетное число элементов, то не учитывает в расчете средний элемент
+    т.к. он не относится ни к левой ни к правой части. Не притендую на истину, я так вижу :).
+    */
     private static void printWhichHalfIsBigger(int[] arr) {
         int sumLeft = 0;
         int sumRight = 0;
