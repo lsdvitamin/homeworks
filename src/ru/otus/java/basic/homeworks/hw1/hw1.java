@@ -1,16 +1,18 @@
 package ru.otus.java.basic.homeworks.hw1;
 
-import java.util.Scanner;
+import static ru.otus.java.basic.homeworks.util.chooseRequiredNumber;
 
-public class Main {
-    public static void main(String[] args) {
+public class hw1 {
+    public static void coreHomework1() {
+        System.out.println("----------------Домашнее задание #1-----------------");
         int numberOfMethod = 1;
         while (numberOfMethod != 0) {
             int number1 = (int) (Math.random() * 40) - 20;
             int number2 = (int) (Math.random() * 40) - 20;
             int number3 = (int) (Math.random() * 40) - 20;
             boolean increment = number3 > 0;
-            numberOfMethod = chooseNumberOfMethod();
+            System.out.print("\nВведите номер метода для ДЗ-1(1-5)  /0-выход/: ");
+            numberOfMethod = chooseRequiredNumber();
             if (numberOfMethod == 1) {
                 greetings();
             } else if (numberOfMethod == 2) {
@@ -29,16 +31,6 @@ public class Main {
             }
         }
     }
-
-
-    //Запрашивает у пользователя номер необходимого метода
-    public static int chooseNumberOfMethod() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("\nВведите номер метода(1-5)  /0-выход/");
-        return scanner.nextInt();
-    }
-
 
     //Метод1. Выводит четыре слова в виде столбца
     public static void greetings() {
