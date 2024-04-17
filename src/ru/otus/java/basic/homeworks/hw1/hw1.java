@@ -1,6 +1,6 @@
 package ru.otus.java.basic.homeworks.hw1;
 
-import static ru.otus.java.basic.homeworks.util.chooseRequiredNumber;
+import static ru.otus.java.basic.homeworks.util.inputNumber;
 
 public class hw1 {
     public static void coreHomework1() {
@@ -12,7 +12,7 @@ public class hw1 {
             int number3 = (int) (Math.random() * 40) - 20;
             boolean increment = number3 > 0;
             System.out.print("\nВведите номер метода для ДЗ-1(1-5)  /0-выход/: ");
-            numberOfMethod = chooseRequiredNumber();
+            numberOfMethod = inputNumber();
             if (numberOfMethod == 1) {
                 greetings();
             } else if (numberOfMethod == 2) {

@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw2;
 
 import java.util.Arrays;
 
-import static ru.otus.java.basic.homeworks.util.chooseRequiredNumber;
+import static ru.otus.java.basic.homeworks.util.inputNumber;
 import static ru.otus.java.basic.homeworks.util.inputString;
 
 public class hw2 {
@@ -12,12 +12,12 @@ public class hw2 {
         int numberOfMethod = 1;
         while (numberOfMethod != 0) {
             System.out.print("\nВведите номер метода(1-9) для ДЗ-2 /0-выход/: ");
-            numberOfMethod = chooseRequiredNumber();
+            numberOfMethod = inputNumber();
             if (numberOfMethod == 1) {
                 int numberOfString;
                 String str;
                 System.out.print("\nВведите количество строк: ");
-                numberOfString = chooseRequiredNumber();
+                numberOfString = inputNumber();
                 System.out.print("\nВведите строку: ");
                 str = inputString();
                 printNTimes(numberOfString, str);
