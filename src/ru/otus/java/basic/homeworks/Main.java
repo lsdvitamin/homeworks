@@ -1,4 +1,4 @@
-package ru.otus.java.basic.homeworks;
+package ru.otus.java.basic.homeworks.Hw1;
 
 import java.util.Scanner;
 
@@ -34,7 +34,7 @@ public class Main {
     //Запрашивает у пользователя номер необходимого метода
     public static int chooseNumberOfMethod() {
         Scanner scanner = new Scanner(System.in);
-        //System.out.println(1 + 1 +  "2+2" + 1 + 1);
+
         System.out.println("\nВведите номер метода(1-5)  /0-выход/");
         return scanner.nextInt();
     }
@@ -94,4 +94,5 @@ public class Main {
         System.out.println(" (Аргументы: " + initValue + "; " + delta + "; " + increment + ")");
         System.out.println("-----------------------------------------------");
     }
+
 }
