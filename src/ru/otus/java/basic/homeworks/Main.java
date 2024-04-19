@@ -1,8 +1,8 @@
 package ru.otus.java.basic.homeworks;
 
-import static ru.otus.java.basic.homeworks.hw1.Hw1.*;
-import static ru.otus.java.basic.homeworks.hw2.Hw2.*;
-import static ru.otus.java.basic.homeworks.util.inputNumber;
+import static ru.otus.java.basic.homeworks.Util.inputNumber;
+import static ru.otus.java.basic.homeworks.hw1.Hw1.coreHomework1;
+import static ru.otus.java.basic.homeworks.hw2.Hw2.coreHomework2;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,6 +19,4 @@ public class Main {
             System.out.println("Похоже что такое ДЗ я еще не сделал :(");
         }
     }
-
-
 }
