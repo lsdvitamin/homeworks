@@ -1,4 +1,4 @@
-package ru.otus.java.basic.homeworks.Hw2;
+package ru.otus.java.basic.homeworks.hw2;
 
 import java.util.Arrays;
 
@@ -64,6 +64,7 @@ public class Hw2 {
 
     //Метод 9*. Меняет местами элементы массива
     private static void swapArr(int[] arr) {
+        //int lenArr = arr.length % 2 == 0 ? arr.length / 2 : arr.length / 2 + 1;
         int buf;
         System.out.print("Массив до перестановки: ");
         System.out.println(Arrays.toString(arr));
@@ -164,7 +165,7 @@ public class Hw2 {
         System.out.print("Массив до трансформации: ");
         System.out.println(Arrays.toString(arr));
         for (int i = 0; i < arr.length; i++) {
-            arr[i] += increaseNumber;
+            arr[i] = arr[i] + increaseNumber;
         }
         System.out.print("Массив после трансформации: ");
         System.out.println(Arrays.toString(arr));

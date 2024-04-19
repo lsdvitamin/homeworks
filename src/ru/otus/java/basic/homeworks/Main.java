@@ -1,8 +1,7 @@
 package ru.otus.java.basic.homeworks;
-
-import static ru.otus.java.basic.homeworks.Hw1.hw1.coreHomework1;
-import static ru.otus.java.basic.homeworks.Hw2.hw2.coreHomework2;
-import static ru.otus.java.basic.homeworks.util.inputNumber;
+import static ru.otus.java.basic.homeworks.Util.inputNumber;
+import static ru.otus.java.basic.homeworks.hw1.Hw1_.coreHomework1;
+import static ru.otus.java.basic.homeworks.hw2.Hw2.coreHomework2;
 
 public class Main {
     public static void main(String[] args) {

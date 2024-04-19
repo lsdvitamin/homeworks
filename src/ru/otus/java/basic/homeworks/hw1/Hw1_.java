@@ -1,8 +1,8 @@
-package ru.otus.java.basic.homeworks.Hw1;
+package ru.otus.java.basic.homeworks.hw1;
 
-import static ru.otus.java.basic.homeworks.util.inputNumber;
+import static ru.otus.java.basic.homeworks.Util.inputNumber;
 
-public class hw1 {
+public class Hw1_ {
     public static void coreHomework1() {
         System.out.println("----------------Домашнее задание #1-----------------");
         int numberOfMethod = 1;
