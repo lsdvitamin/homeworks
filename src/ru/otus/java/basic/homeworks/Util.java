@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks;
 
 import java.util.Scanner;
 
-public class util {
+public class Util {
     //Запрашивает у пользователя ввод числа
     public static int inputNumber() {
         Scanner scanner = new Scanner(System.in);

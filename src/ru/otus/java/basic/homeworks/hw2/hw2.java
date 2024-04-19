@@ -2,10 +2,10 @@ package ru.otus.java.basic.homeworks.hw2;
 
 import java.util.Arrays;
 
-import static ru.otus.java.basic.homeworks.util.inputNumber;
-import static ru.otus.java.basic.homeworks.util.inputString;
+import static ru.otus.java.basic.homeworks.Util.inputNumber;
+import static ru.otus.java.basic.homeworks.Util.inputString;
 
-public class hw2 {
+public class Hw2 {
 
     public static void coreHomework2() {
         System.out.println("----------------Домашнее задание #2-----------------");
@@ -64,7 +64,6 @@ public class hw2 {
 
     //Метод 9*. Меняет местами элементы массива
     private static void swapArr(int[] arr) {
-        //int lenArr = arr.length % 2 == 0 ? arr.length / 2 : arr.length / 2 + 1;
         int buf;
         System.out.print("Массив до перестановки: ");
         System.out.println(Arrays.toString(arr));
@@ -123,13 +122,13 @@ public class hw2 {
 
     //Метод 6*. Суммирует элементы массивов и копирует результат в новы массив. Выводит результат на экран
     private static void sumArraysElements(int[] arr1, int[] arr2, int[] arr3) {
-        int MaxLength = Math.max(Math.max(arr1.length, arr2.length), arr3.length);
-        int[] totalArr = new int[MaxLength];
+        int maxLength = Math.max(Math.max(arr1.length, arr2.length), arr3.length);
+        int[] totalArr = new int[maxLength];
         int element1;
         int element2;
         int element3;
         int sumElement;
-        for (int i = 0; i < MaxLength; i++) {
+        for (int i = 0; i < maxLength; i++) {
             element1 = arr1.length > i ? arr1[i] : 0;
             element2 = arr2.length > i ? arr2[i] : 0;
             element3 = arr3.length > i ? arr3[i] : 0;
@@ -165,7 +164,7 @@ public class hw2 {
         System.out.print("Массив до трансформации: ");
         System.out.println(Arrays.toString(arr));
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = arr[i] + increaseNumber;
+            arr[i] += increaseNumber;
         }
         System.out.print("Массив после трансформации: ");
         System.out.println(Arrays.toString(arr));
