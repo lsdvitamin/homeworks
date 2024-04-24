@@ -11,7 +11,7 @@ public class Hw1 {
             int number2 = (int) (Math.random() * 40) - 20;
             int number3 = (int) (Math.random() * 40) - 20;
             boolean increment = number3 > 0;
-            System.out.print("\nВведите номер метода для ДЗ-1(1-5)  /0-выход/: ");
+            System.out.print("\nВведите номер метода для ДЗ-1(1-5)  /0-к выбору ДЗ/: ");
             numberOfMethod = inputNumber();
             if (numberOfMethod == 1) {
                 greetings();
@@ -24,7 +24,7 @@ public class Hw1 {
             } else if (numberOfMethod == 5) {
                 addOrSubtractAndPrint(number1, number2, increment);
             } else if (numberOfMethod == 0) {
-                System.out.println("Выход");
+                System.out.println("к выбору ДЗ");
             } else {
                 System.out.println("Вы ввели недопустимое число");
                 System.out.println("-----------------------------------------------");
@@ -32,14 +32,14 @@ public class Hw1 {
         }
     }
 
-    //Метод1. Выводит четыре слова в виде столбца
+    //Метод 1. Выводит четыре слова в виде столбца
     public static void greetings() {
         System.out.println("Hello\nWorld\nfrom\nJava");
         System.out.println("-----------------------------------------------");
     }
 
 
-    //Метод2. Проверяет положительная ли сумма или отрицательная, выводит результат
+    //Метод 2. Проверяет положительная ли сумма или отрицательная, выводит результат
     public static void checkSign(int a, int b, int c) {
         int result = a + b + c;
         if (result >= 0) {
@@ -52,7 +52,7 @@ public class Hw1 {
     }
 
 
-    //Метод3. Определяет цвет в зависимости от значения переменной data, выводит результат
+    //Метод 3. Определяет цвет в зависимости от значения переменной data, выводит результат
     public static void selectColor() {
         int data = 15;
         if (data <= 10) {
@@ -66,7 +66,7 @@ public class Hw1 {
     }
 
 
-    //Метод4. Сравнивает значения a и b, выводит результат
+    //Метод 4. Сравнивает значения a и b, выводит результат
     public static void compareNumbers() {
         int a = 10;
         int b = 20;
@@ -79,7 +79,7 @@ public class Hw1 {
     }
 
 
-    //Метод5. Считает сумму или разность a и b в зависимости от значения переменной increment, выводит результат
+    //Метод 5. Считает сумму или разность a и b в зависимости от значения переменной increment, выводит результат
     public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
         int result = increment ? initValue + delta : initValue - delta;
         System.out.print(result);

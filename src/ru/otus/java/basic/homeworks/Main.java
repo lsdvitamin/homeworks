@@ -3,20 +3,25 @@ package ru.otus.java.basic.homeworks;
 import static ru.otus.java.basic.homeworks.Util.inputNumber;
 import static ru.otus.java.basic.homeworks.hw1.Hw1.coreHomework1;
 import static ru.otus.java.basic.homeworks.hw2.Hw2.coreHomework2;
+import static ru.otus.java.basic.homeworks.hw3.Hw3.coreHomework3;
 
 public class Main {
     public static void main(String[] args) {
         int numberOfHomework = 0;
-        System.out.print("\nВведите номер ДЗ(1-2)  /0-выход/: ");
-        numberOfHomework = inputNumber();
-        if (numberOfHomework == 1) {
-            coreHomework1();
-        } else if (numberOfHomework == 2) {
-            coreHomework2();
-        } else if (numberOfHomework == 0) {
-            System.out.println("Выход");
-        } else {
-            System.out.println("Похоже что такое ДЗ я еще не сделал :(");
+        while (numberOfHomework != 99) {
+            System.out.print("\nВведите номер ДЗ(1-3)  /99-выход/: ");
+            numberOfHomework = inputNumber();
+            if (numberOfHomework == 1) {
+                coreHomework1();
+            } else if (numberOfHomework == 2) {
+                coreHomework2();
+            } else if (numberOfHomework == 3) {
+                coreHomework3();
+            } else if (numberOfHomework == 99) {
+                System.out.println("Выход");
+            } else {
+                System.out.println("Похоже что такое ДЗ я еще не сделал :(");
+            }
         }
     }
 }
