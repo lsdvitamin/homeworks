@@ -11,7 +11,7 @@ public class Hw2 {
         System.out.println("----------------Домашнее задание #2-----------------");
         int numberOfMethod = 1;
         while (numberOfMethod != 0) {
-            System.out.print("\nВведите номер метода(1-9) для ДЗ-2 /0-выход/: ");
+            System.out.print("\nВведите номер метода(1-9) для ДЗ-2 /0-к выбору ДЗ/: ");
             numberOfMethod = inputNumber();
             if (numberOfMethod == 1) {
                 int numberOfString;
@@ -54,7 +54,7 @@ public class Hw2 {
                 int[] arr = {43, 2, 15, 2, 0, 4, 8, 11};
                 swapArr(arr);
             } else if (numberOfMethod == 0) {
-                System.out.println("Выход");
+                System.out.println("к выбору ДЗ");
             } else {
                 System.out.println("Вы ввели недопустимое число");
                 System.out.println("-----------------------------------------------");
