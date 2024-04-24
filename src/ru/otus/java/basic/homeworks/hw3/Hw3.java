@@ -42,13 +42,12 @@ public class Hw3 {
     private static int getCalcSumAllElemensSecondRow(int[][] arr2d) {
         if (arr2d.length < 2) {
             return -1;
-        } else {
-            int sum = 0;
-            for (int j = 0; j < arr2d[1].length; j++) {
-                sum += arr2d[1][j];
-            }
-            return sum;
         }
+        int sum = 0;
+        for (int j = 0; j < arr2d[1].length; j++) {
+            sum += arr2d[1][j];
+        }
+        return sum;
     }
 
     //Метод 4. Находит и возвращает максимальный элемент массива
@@ -75,21 +74,20 @@ public class Hw3 {
         }
 
         for (int i = 0; i < arrSquare.length; i++) {
-            for (int j = 0; j < arrSquare[i].length; j++) {
-                if (i == j) {
-                    arrSquare[i][j] = 0;
-                    arrSquare[arrSquare.length - i - 1][j] = 0;
-                }
-            }
+            arrSquare[i][i] = 0;
+            arrSquare[arrSquare.length - i - 1][i] = 0;
         }
 
         System.out.println("Занулённый массив:");
-        for (int i = 0; i < arrSquare.length; i++) {
+        for (
+                int i = 0;
+                i < arrSquare.length; i++) {
             for (int j = 0; j < arrSquare[i].length; j++) {
                 System.out.print(arrSquare[i][j] + "  ");
             }
             System.out.println();
         }
+
     }
 
     //Метод 2. Печатает квадрат из звездочек с количеством сторон равный lengthSides
