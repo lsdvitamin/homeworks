@@ -69,6 +69,7 @@ public class User {
     public void pringInfoAboutUser(User user){
         System.out.println("ФИО: " + getLastName() + " " + getFirstName() + " " +getMiddleName());
         System.out.println("Год рождения: " + getYearOfBirth());
+        System.out.println("e-mail: " + getEmail());
     }
 
 }
