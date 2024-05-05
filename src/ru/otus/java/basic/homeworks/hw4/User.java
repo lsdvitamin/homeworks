@@ -62,6 +62,10 @@ public class User {
         this.email = email;
     }
 
+    /**
+     * Выводит иныормацию о пользователе
+     * @param user экземпляр класса Пользователь
+     */
     public void pringInfoAboutUser(User user){
         System.out.println("ФИО: " + getLastName() + " " + getFirstName() + " " +getMiddleName());
         System.out.println("Год рождения: " + getYearOfBirth());
