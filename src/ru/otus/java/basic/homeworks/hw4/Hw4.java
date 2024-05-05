@@ -13,8 +13,6 @@ import static ru.otus.java.basic.homeworks.Util.inputString;
  */
 
 public class Hw4 {
-    static User user;
-
     static Box box;
     static User[] users;
 
@@ -142,19 +140,6 @@ public class Hw4 {
             }
         }
     }
-
-    /**
-     * Проверяет, открыта коробка или нет
-     *
-     * @return
-     */
-    private static boolean getStatusBox() {
-        if (box.getIsOpen()) {
-            return true;
-        }
-        return false;
-    }
-
 
     /**
      * Выводит в консоль пользователей старше older
