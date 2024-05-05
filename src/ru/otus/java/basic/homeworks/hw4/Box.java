@@ -7,36 +7,34 @@ package ru.otus.java.basic.homeworks.hw4;
  * @progect homeworks
  */
 public class Box {
-    private static int LENGTH;
-    private static int WIDTH;
-    private static int HEIGHT;
+    private int length;
+    private int width;
+    private int height;
     private int weight;
     private String color;
     private boolean isOpen;
     private String whatIsInside;
 
-    public Box(int LENGTH, int WIDTH, int HEIGHT, int weight, String color, boolean isOpen, String whatIsInside) {
-        this.LENGTH = LENGTH;
-        this.WIDTH = WIDTH;
-        this.HEIGHT = HEIGHT;
+    public Box(int length, int width, int height, int weight, String color, boolean isOpen, String whatIsInside) {
+        this.length = length;
+        this.width = width;
+        this.height = height;
         this.weight = weight;
         this.color = color;
         this.isOpen = isOpen;
         this.whatIsInside = whatIsInside;
     }
 
-    public static int getLENGTH() {
-        return LENGTH;
+    public int getLength() {
+        return length;
     }
 
-
-    public static int getWIDTH() {
-        return WIDTH;
+    public int getWidth() {
+        return width;
     }
 
-
-    public static int getHEIGHT() {
-        return HEIGHT;
+    public int getHeight() {
+        return height;
     }
 
     public int getWeight() {
@@ -73,7 +71,7 @@ public class Box {
     public void printInfo(){
         String status = getIsOpen() ? "Открыта":"Закрыта";
         String whatIsInsid = getWhatIsInside().equals("") ? "пусто":getWhatIsInside();
-        System.out.println("Размер коробки ДxШxВ: " + getLENGTH() + "x" + getWIDTH() + "x" +  + getHEIGHT() +
+        System.out.println("Размер коробки ДxШxВ: " + getLength() + "x" + getWidth() + "x" +  + getHeight() +
                 "\nВес: " + getWeight() + "\nЦвет: " + getColor() +
                 "\nВнутри: " + whatIsInsid + "\n" + status);
     }
