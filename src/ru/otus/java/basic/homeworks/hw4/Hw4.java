@@ -43,25 +43,25 @@ public class Hw4 {
                     } else if (action == 2) {
                         System.out.print("Введите цвет в который будем красить: ");
                         String newColor = inputString();
-                        paintBox(newColor);
+                        paint(newColor);
                     } else if (action == 3) {
-                        if (getBoxIsFull()) {
-                            System.out.println("\nКоробка занята. Выбросите оттуда " + box.getWhatIsInside());
+                        if (getIsFull()) {
+                            System.out.println("\nКоробка занята. Выбросите оттуда " + whatIsInside);
                         } else {
-                            if (box.getIsOpen()) {
+                            if (isOpen) {
                                 System.out.print("Введите название предмета: ");
                                 String objectName = inputString();
-                                getPutSomethinпIntoBox(objectName);
+                                getPutSomethinпInto(objectName);
                             } else {
                                 System.out.println("\nНельзя положить что-то в закрытую коробку");
                             }
                         }
                     } else if (action == 4) {
-                        getThrowObjectFromBox();
+                        getThrowObjectFrom();
                     } else if (action == 5) {
-                        changeStatusBox("open");
+                        changeStatus("open");
                     } else if (action == 6) {
-                        changeStatusBox("close");
+                        changeStatus("close");
                     }
                 }
             }
@@ -78,7 +78,7 @@ public class Hw4 {
     private static void getPrintUsers(int count, int older) {
         for (int i = 0; i < count; i++) {
             if (users[i].getYearOfBirth() > older) {
-                users[i].pringInfoAboutUser(users[i]);
+                users[i].pringInfoAboutUser();
                 System.out.println();
             }
         }

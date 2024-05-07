@@ -12,8 +12,8 @@ public class Box {
     private int height;
     private static int weight;
     private static String color;
-    private static boolean isOpen;
-    private static String whatIsInside;
+    protected static boolean isOpen;
+    protected static String whatIsInside;
 
     public Box(int length, int width, int height, int weight, String color, boolean isOpen, String whatIsInside) {
         this.length = length;
@@ -25,74 +25,32 @@ public class Box {
         this.whatIsInside = whatIsInside;
     }
 
-    public int getLength() {
-        return length;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public static int getWeight() {
-        return weight;
-    }
-
-    public static void setWeight(int weight) {Box.weight = weight;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public static void setColor(String color) {
-        Box.color = color;
-    }
-
-    public static boolean getIsOpen() {
-        return isOpen;
-    }
-
-    public static void setIsOpen(boolean isOpen) {
-        Box.isOpen = isOpen;
-    }
-
-    public static String getWhatIsInside() {
-        return whatIsInside;
-    }
-
-    public static void setWhatIsInside(String whatIsInside) {
-        Box.whatIsInside = whatIsInside;
-    }
 
     /**
      * Выводит информацию о коробке
      */
-    public void printInfo(){
-        String status = getIsOpen() ? "Открыта":"Закрыта";
-        String whatIsInsid = getWhatIsInside().equals("") ? "пусто":getWhatIsInside();
-        System.out.println("Размер коробки ДxШxВ: " + getLength() + "x" + getWidth() + "x" +  + getHeight() +
-                "\nВес: " + getWeight() + "\nЦвет: " + getColor() +
+    public void printInfo() {
+        String status = isOpen ? "Открыта" : "Закрыта";
+        String whatIsInsid = whatIsInside.equals("") ? "пусто" : whatIsInside;
+        System.out.println("Размер коробки ДxШxВ: " + length + "x" + width + "x" + +height +
+                "\nВес: " + weight + "\nЦвет: " + color +
                 "\nВнутри: " + whatIsInsid + "\n" + status);
     }
 
     /**
      * Выкидывает из коробки предмет
      */
-    public static void getThrowObjectFromBox() {
-        if (getIsOpen()) {
-            if (getWhatIsInside().equals("")) {
+    public static void getThrowObjectFrom() {
+        if (isOpen) {
+            if (whatIsInside.equals("")) {
                 System.out.println("\n" + "коробка пуста, нечего выбрасывать");
             } else {
-                System.out.println("\n" + getWhatIsInside() + " выброшен из коробки");
-                setWhatIsInside("");
-                setWeight(getWeight() - 10);
+                System.out.println("\n" + whatIsInside + " выброшен из коробки");
+                whatIsInside = "";
+                weight -= 10;
             }
         } else {
-            System.out.println("\nВы не можете выбросить " + getWhatIsInside() + " пока коробка закрыта");
+            System.out.println("\nВы не можете выбросить " + whatIsInside + " пока коробка закрыта");
         }
     }
 
@@ -101,9 +59,9 @@ public class Box {
      *
      * @param newColor новый цвет
      */
-    protected static void paintBox(String newColor) {
-        setColor(newColor);
-        setWeight(getWeight() + 1);
+    protected static void paint(String newColor) {
+        color = newColor;
+        weight += 1;
         System.out.println("\nПокрасил коробку в " + newColor);
     }
 
@@ -113,10 +71,10 @@ public class Box {
      *
      * @param object Предмет, который хотим положить в коробку
      */
-    static void getPutSomethinпIntoBox(String object) {
-        setWhatIsInside(object);
-        setWeight(getWeight() + 10);
-        System.out.println("\nПоложили в коробку " + getWhatIsInside());
+    static void getPutSomethinпInto(String object) {
+        whatIsInside = object;
+        weight += 10;
+        System.out.println("\nПоложили в коробку " + whatIsInside);
     }
 
 
@@ -125,8 +83,8 @@ public class Box {
      *
      * @return
      */
-    static boolean getBoxIsFull() {
-        if (getWhatIsInside().isEmpty()) {
+    static boolean getIsFull() {
+        if (whatIsInside.isEmpty()) {
             return false;
         }
         return true;
@@ -135,17 +93,17 @@ public class Box {
     /**
      * Меняет статус коробки. Если была открыта, то закрывает. И наоборот, если была закрыта, то открывает
      */
-    static void changeStatusBox(String action) {
+    static void changeStatus(String action) {
         if (action.equals("close")) {
-            if (getIsOpen()) {
-                setIsOpen(false);
+            if (isOpen) {
+                isOpen = false;
                 System.out.println("\nВыполнено-коробка закрыта");
             } else {
                 System.out.println("\nНе выполнено-коробка уже была закрыта");
             }
         } else {
-            if (!getIsOpen()) {
-                setIsOpen(true);
+            if (!isOpen) {
+                isOpen = true;
                 System.out.println("\nВыполнено-коробка открыта");
             } else {
                 System.out.println("\nНе выполнено-коробка уже была открыта");
