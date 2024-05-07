@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         int numberOfHomework = 0;
         while (numberOfHomework != 99) {
-            System.out.print("\nВведите номер ДЗ(1-4)  /99-выход/: ");
+            System.out.print("\nВведите номер ДЗ(1-3)  /99-выход/: ");
             numberOfHomework = inputNumber();
             if (numberOfHomework == 1) {
                 coreHomework1();

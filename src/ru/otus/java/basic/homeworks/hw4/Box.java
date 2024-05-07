@@ -10,10 +10,10 @@ public class Box {
     private int length;
     private int width;
     private int height;
-    private static int weight;
-    private static String color;
-    protected static boolean isOpen;
-    protected static String whatIsInside;
+    private int weight;
+    private String color;
+    protected boolean isOpen;
+    protected String whatIsInside;
 
     public Box(int length, int width, int height, int weight, String color, boolean isOpen, String whatIsInside) {
         this.length = length;
@@ -40,7 +40,7 @@ public class Box {
     /**
      * Выкидывает из коробки предмет
      */
-    public static void getThrowObjectFrom() {
+    public void getThrowObjectFrom() {
         if (isOpen) {
             if (whatIsInside.equals("")) {
                 System.out.println("\n" + "коробка пуста, нечего выбрасывать");
@@ -59,7 +59,7 @@ public class Box {
      *
      * @param newColor новый цвет
      */
-    protected static void paint(String newColor) {
+    public void paint(String newColor) {
         color = newColor;
         weight += 1;
         System.out.println("\nПокрасил коробку в " + newColor);
@@ -71,7 +71,7 @@ public class Box {
      *
      * @param object Предмет, который хотим положить в коробку
      */
-    static void getPutSomethinпInto(String object) {
+    public void getPutSomethinпInto(String object) {
         whatIsInside = object;
         weight += 10;
         System.out.println("\nПоложили в коробку " + whatIsInside);
@@ -83,7 +83,7 @@ public class Box {
      *
      * @return
      */
-    static boolean getIsFull() {
+    public boolean getIsFull() {
         if (whatIsInside.isEmpty()) {
             return false;
         }
@@ -93,7 +93,7 @@ public class Box {
     /**
      * Меняет статус коробки. Если была открыта, то закрывает. И наоборот, если была закрыта, то открывает
      */
-    static void changeStatus(String action) {
+    public void changeStatus(String action) {
         if (action.equals("close")) {
             if (isOpen) {
                 isOpen = false;

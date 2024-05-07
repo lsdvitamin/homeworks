@@ -2,8 +2,7 @@ package ru.otus.java.basic.homeworks.hw4;
 
 import java.util.Random;
 
-import static ru.otus.java.basic.homeworks.Util.inputNumber;
-import static ru.otus.java.basic.homeworks.Util.inputString;
+import static ru.otus.java.basic.homeworks.Util.*;
 import static ru.otus.java.basic.homeworks.hw4.Box.*;
 
 /**
@@ -43,25 +42,25 @@ public class Hw4 {
                     } else if (action == 2) {
                         System.out.print("Введите цвет в который будем красить: ");
                         String newColor = inputString();
-                        paint(newColor);
+                        box.paint(newColor);
                     } else if (action == 3) {
-                        if (getIsFull()) {
-                            System.out.println("\nКоробка занята. Выбросите оттуда " + whatIsInside);
+                        if (box.getIsFull()) {
+                            System.out.println("\nКоробка занята. Выбросите оттуда " + box.whatIsInside);
                         } else {
-                            if (isOpen) {
+                            if (box.isOpen) {
                                 System.out.print("Введите название предмета: ");
                                 String objectName = inputString();
-                                getPutSomethinпInto(objectName);
+                                box.getPutSomethinпInto(objectName);
                             } else {
                                 System.out.println("\nНельзя положить что-то в закрытую коробку");
                             }
                         }
                     } else if (action == 4) {
-                        getThrowObjectFrom();
+                        box.getThrowObjectFrom();
                     } else if (action == 5) {
-                        changeStatus("open");
+                        box.changeStatus("open");
                     } else if (action == 6) {
-                        changeStatus("close");
+                        box.changeStatus("close");
                     }
                 }
             }
