@@ -4,6 +4,7 @@ import java.util.Random;
 
 import static ru.otus.java.basic.homeworks.Util.inputNumber;
 import static ru.otus.java.basic.homeworks.Util.inputString;
+import static ru.otus.java.basic.homeworks.hw4.Box.*;
 
 /**
  * класс Домашняя работа 4
@@ -32,9 +33,9 @@ public class Hw4 {
                 box = new Box(40, 30, 20, 50, "красный", false, "спички");
                 int action = -1;
                 while (action != 0) {
-                    System.out.print("\nВведите действие \n1-вывести информацию о коробке\n2-Перекрасить коробку\n" +
-                            "3-Положить предмет в коробку\n4-Выкинуть предмет из коробки" +
-                            "\n5-открыть коробку\n6-Закрыть коробку  /0-к выбору метода/: ");
+                    System.out.print("\nвведите действие \n1-вывести информацию о коробке\n2-перекрасить коробку\n" +
+                            "3-положить предмет в коробку\n4-выкинуть предмет из коробки" +
+                            "\n5-открыть коробку\n6-закрыть коробку  /0-к выбору метода/: ");
                     action = inputNumber();
                     if (action == 1) {
                         System.out.println();
@@ -67,79 +68,6 @@ public class Hw4 {
         }
     }
 
-    /**
-     * Выкидывает из коробки предмет
-     */
-    private static void getThrowObjectFromBox() {
-        if (box.getIsOpen()) {
-            if (box.getWhatIsInside().equals("")) {
-                System.out.println("\n" + "коробка пуста, нечего выбрасывать");
-            } else {
-                System.out.println("\n" + box.getWhatIsInside() + " выброшен из коробки");
-                box.setWhatIsInside("");
-                box.setWeight(box.getWeight() - 10);
-            }
-        } else {
-            System.out.println("\nВы не можете выбросить " + box.getWhatIsInside() + " пока коробка закрыта");
-        }
-    }
-
-    /**
-     * Красит коробку в другой цвет
-     *
-     * @param newColor новый цвет
-     */
-    private static void paintBox(String newColor) {
-        box.setColor(newColor);
-        box.setWeight(box.getWeight() + 1);
-        System.out.println("\nПокрасил коробку в " + newColor);
-    }
-
-
-    /**
-     * Кладет в коробку предмет если коробка пустая. Если Полная, то выводит сообщение об этом
-     *
-     * @param object Предмет, который хотим положить в коробку
-     */
-    private static void getPutSomethinпIntoBox(String object) {
-        box.setWhatIsInside(object);
-        box.setWeight(box.getWeight() + 10);
-        System.out.println("\nПоложили в коробку " + box.getWhatIsInside());
-    }
-
-
-    /**
-     * Проверяет, есть ли что то в коробке
-     *
-     * @return
-     */
-    private static boolean getBoxIsFull() {
-        if (box.getWhatIsInside().isEmpty()) {
-            return false;
-        }
-        return true;
-    }
-
-    /**
-     * Меняет статус коробки. Если была открыта, то закрывает. И наоборот, если была закрыта, то открывает
-     */
-    private static void changeStatusBox(String action) {
-        if (action.equals("close")) {
-            if (box.getIsOpen()) {
-                box.setIsOpen(false);
-                System.out.println("\nВыполнено-коробка закрыта");
-            } else {
-                System.out.println("\nНе выполнено-коробка уже была закрыта");
-            }
-        } else {
-            if (!box.getIsOpen()) {
-                box.setIsOpen(true);
-                System.out.println("\nВыполнено-коробка открыта");
-            } else {
-                System.out.println("\nНе выполнено-коробка уже была открыта");
-            }
-        }
-    }
 
     /**
      * Выводит в консоль пользователей старше older
