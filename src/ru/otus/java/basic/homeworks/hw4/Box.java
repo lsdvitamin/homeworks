@@ -12,8 +12,8 @@ public class Box {
     private int height;
     private int weight;
     private String color;
-    protected boolean isOpen;
-    protected String whatIsInside;
+    boolean isOpen;
+    String whatIsInside;
 
     public Box(int length, int width, int height, int weight, String color, boolean isOpen, String whatIsInside) {
         this.length = length;
