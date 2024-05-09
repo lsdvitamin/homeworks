@@ -2,8 +2,8 @@ package ru.otus.java.basic.homeworks.hw4;
 
 import java.util.Random;
 
-import static ru.otus.java.basic.homeworks.Util.*;
-import static ru.otus.java.basic.homeworks.hw4.Box.*;
+import static ru.otus.java.basic.homeworks.Util.inputNumber;
+import static ru.otus.java.basic.homeworks.Util.inputString;
 
 /**
  * класс Домашняя работа 4
@@ -58,9 +58,9 @@ public class Hw4 {
                     } else if (action == 4) {
                         box.getThrowObjectFrom();
                     } else if (action == 5) {
-                        box.changeStatus("open");
+                        box.open();
                     } else if (action == 6) {
-                        box.changeStatus("close");
+                        box.close();
                     }
                 }
             }

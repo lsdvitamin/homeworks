@@ -91,23 +91,26 @@ public class Box {
     }
 
     /**
-     * Меняет статус коробки. Если была открыта, то закрывает. И наоборот, если была закрыта, то открывает
+     * Закрывает коробку
      */
-    public void changeStatus(String action) {
-        if (action.equals("close")) {
-            if (isOpen) {
-                isOpen = false;
-                System.out.println("\nВыполнено-коробка закрыта");
-            } else {
-                System.out.println("\nНе выполнено-коробка уже была закрыта");
-            }
+    public void close() {
+        if (isOpen) {
+            isOpen = false;
+            System.out.println("\nВыполнено-коробка закрыта");
         } else {
-            if (!isOpen) {
-                isOpen = true;
-                System.out.println("\nВыполнено-коробка открыта");
-            } else {
-                System.out.println("\nНе выполнено-коробка уже была открыта");
-            }
+            System.out.println("\nНе выполнено-коробка уже была закрыта");
+        }
+    }
+
+    /**
+     * Открывает коробку
+     */
+    public void open() {
+        if (!isOpen) {
+            isOpen = true;
+            System.out.println("\nВыполнено-коробка открыта");
+        } else {
+            System.out.println("\nНе выполнено-коробка уже была открыта");
         }
     }
 
