@@ -75,7 +75,7 @@ public class Box {
             System.out.println("\nНельзя положить что-то в закрытую коробку");
             return;
         }
-        if (whatIsInside.isEmpty()) {
+        if (!whatIsInside.isEmpty()) {
             System.out.println("\nКоробка занята. Выбросите оттуда " + whatIsInside);
             return;
         }
