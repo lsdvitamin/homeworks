@@ -1,5 +1,7 @@
 package ru.otus.java.basic.homeworks.hw4;
 
+import static ru.otus.java.basic.homeworks.Util.inputString;
+
 /**
  * класс Коробка
  *
@@ -12,8 +14,8 @@ public class Box {
     private int height;
     private int weight;
     private String color;
-    boolean isOpen;
-    String whatIsInside;
+    private boolean isOpen;
+    private String whatIsInside;
 
     public Box(int length, int width, int height, int weight, String color, boolean isOpen, String whatIsInside) {
         this.length = length;
@@ -40,54 +42,48 @@ public class Box {
     /**
      * Выкидывает из коробки предмет
      */
-    public void getThrowObjectFrom() {
-        if (isOpen) {
-            if (whatIsInside.equals("")) {
-                System.out.println("\n" + "коробка пуста, нечего выбрасывать");
-            } else {
-                System.out.println("\n" + whatIsInside + " выброшен из коробки");
-                whatIsInside = "";
-                weight -= 10;
-            }
-        } else {
+    public void throwOutObject() {
+        if (!isOpen) {
             System.out.println("\nВы не можете выбросить " + whatIsInside + " пока коробка закрыта");
+            return;
         }
+        if (whatIsInside.equals("")) {
+            System.out.println("\n" + "коробка пуста, нечего выбрасывать");
+            return;
+        }
+        System.out.println("\n" + whatIsInside + " выброшен из коробки");
+        whatIsInside = "";
+        weight -= 10;
     }
 
     /**
      * Красит коробку в другой цвет
-     *
-     * @param newColor новый цвет
      */
-    public void paint(String newColor) {
-        color = newColor;
+    public void paint() {
+        System.out.print("Введите цвет в который будем красить: ");
+        color = inputString();
         weight += 1;
-        System.out.println("\nПокрасил коробку в " + newColor);
+        System.out.println("\nПокрасил коробку в " + color);
     }
 
 
     /**
      * Кладет в коробку предмет если коробка пустая. Если Полная, то выводит сообщение об этом
-     *
-     * @param object Предмет, который хотим положить в коробку
      */
-    public void getPutSomethinпInto(String object) {
-        whatIsInside = object;
+    public void putSomething() {
+        if (!isOpen) {
+            System.out.println("\nНельзя положить что-то в закрытую коробку");
+            return;
+        }
+        if (whatIsInside.isEmpty()) {
+            System.out.println("\nКоробка занята. Выбросите оттуда " + whatIsInside);
+            return;
+        }
+        System.out.print("Введите название предмета: ");
+        whatIsInside = inputString();
         weight += 10;
         System.out.println("\nПоложили в коробку " + whatIsInside);
-    }
 
-
-    /**
-     * Проверяет, есть ли что то в коробке
-     *
-     * @return
-     */
-    public boolean getIsFull() {
-        if (whatIsInside.isEmpty()) {
-            return false;
-        }
-        return true;
     }
 
     /**

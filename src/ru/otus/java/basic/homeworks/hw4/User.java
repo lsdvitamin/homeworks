@@ -44,7 +44,7 @@ public class User {
     /**
      * Выводит иныормацию о пользователе
      */
-    public void pringInfoAboutUser(){
+    public void printInfoAboutUser(){
         System.out.println("ФИО: " + getLastName() + " " + getFirstName() + " " +getMiddleName());
         System.out.println("Год рождения: " + getYearOfBirth());
         System.out.println("e-mail: " + getEmail());

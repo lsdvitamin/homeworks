@@ -3,7 +3,6 @@ package ru.otus.java.basic.homeworks.hw4;
 import java.util.Random;
 
 import static ru.otus.java.basic.homeworks.Util.inputNumber;
-import static ru.otus.java.basic.homeworks.Util.inputString;
 
 /**
  * класс Домашняя работа 4
@@ -40,23 +39,11 @@ public class Hw4 {
                         System.out.println();
                         box.printInfo();
                     } else if (action == 2) {
-                        System.out.print("Введите цвет в который будем красить: ");
-                        String newColor = inputString();
-                        box.paint(newColor);
+                        box.paint();
                     } else if (action == 3) {
-                        if (box.getIsFull()) {
-                            System.out.println("\nКоробка занята. Выбросите оттуда " + box.whatIsInside);
-                        } else {
-                            if (box.isOpen) {
-                                System.out.print("Введите название предмета: ");
-                                String objectName = inputString();
-                                box.getPutSomethinпInto(objectName);
-                            } else {
-                                System.out.println("\nНельзя положить что-то в закрытую коробку");
-                            }
-                        }
+                        box.putSomething();
                     } else if (action == 4) {
-                        box.getThrowObjectFrom();
+                        box.throwOutObject();
                     } else if (action == 5) {
                         box.open();
                     } else if (action == 6) {
@@ -77,7 +64,7 @@ public class Hw4 {
     private static void getPrintUsers(int count, int older) {
         for (int i = 0; i < count; i++) {
             if (users[i].getYearOfBirth() > older) {
-                users[i].pringInfoAboutUser();
+                users[i].printInfoAboutUser();
                 System.out.println();
             }
         }
