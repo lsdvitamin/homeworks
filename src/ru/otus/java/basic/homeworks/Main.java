@@ -4,6 +4,7 @@ import static ru.otus.java.basic.homeworks.Util.inputNumber;
 import static ru.otus.java.basic.homeworks.hw1.Hw1.coreHomework1;
 import static ru.otus.java.basic.homeworks.hw2.Hw2.coreHomework2;
 import static ru.otus.java.basic.homeworks.hw3.Hw3.coreHomework3;
+import static ru.otus.java.basic.homeworks.hw4.Hw4.coreHomework4;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +18,8 @@ public class Main {
                 coreHomework2();
             } else if (numberOfHomework == 3) {
                 coreHomework3();
+            } else if (numberOfHomework == 4) {
+                coreHomework4();
             } else if (numberOfHomework == 99) {
                 System.out.println("Выход");
             } else {
