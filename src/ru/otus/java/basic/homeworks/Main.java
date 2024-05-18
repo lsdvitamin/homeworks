@@ -6,6 +6,7 @@ import static ru.otus.java.basic.homeworks.hw2.Hw2.coreHomework2;
 import static ru.otus.java.basic.homeworks.hw3.Hw3.coreHomework3;
 import static ru.otus.java.basic.homeworks.hw4.Hw4.coreHomework4;
 import static ru.otus.java.basic.homeworks.hw5.Hw5.coreHomework5;
+import static ru.otus.java.basic.homeworks.hw6.Hw6.coreHomework6;
 
 public class Main {
     public static void main(String[] args) {
