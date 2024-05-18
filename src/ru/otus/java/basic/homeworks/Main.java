@@ -23,6 +23,8 @@ public class Main {
                 coreHomework4();
             } else if (numberOfHomework == 5) {
                 coreHomework5();
+            } else if (numberOfHomework == 6) {
+                coreHomework6();
             } else if (numberOfHomework == 99) {
                 System.out.println("Выход");
             } else {
