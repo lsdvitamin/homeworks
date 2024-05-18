@@ -5,6 +5,7 @@ import static ru.otus.java.basic.homeworks.hw1.Hw1.coreHomework1;
 import static ru.otus.java.basic.homeworks.hw2.Hw2.coreHomework2;
 import static ru.otus.java.basic.homeworks.hw3.Hw3.coreHomework3;
 import static ru.otus.java.basic.homeworks.hw4.Hw4.coreHomework4;
+import static ru.otus.java.basic.homeworks.hw5.Hw5.coreHomework5;
 import static ru.otus.java.basic.homeworks.hw6.Hw6.coreHomework6;
 
 public class Main {
@@ -21,6 +22,8 @@ public class Main {
                 coreHomework3();
             } else if (numberOfHomework == 4) {
                 coreHomework4();
+            } else if (numberOfHomework == 5) {
+                coreHomework5();
             } else if (numberOfHomework == 6) {
                 coreHomework6();
             } else if (numberOfHomework == 99) {
