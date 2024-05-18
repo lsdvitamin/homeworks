@@ -14,22 +14,6 @@ public class Bowl {
         this.curFood = maxFood;
     }
 
-    public int getMaxFood() {
-        return maxFood;
-    }
-
-    public void setMaxFood(int maxFood) {
-        this.maxFood = maxFood;
-    }
-
-    public int getCurFood() {
-        return curFood;
-    }
-
-    public void setCurFood(int curFood) {
-        this.curFood = curFood;
-    }
-
     public void addFood(int howMuchAdd) {
         if (howMuchAdd + curFood > maxFood) {
             System.out.println("Нельзя добавить " + howMuchAdd + ", миска переполнится");
@@ -39,7 +23,7 @@ public class Bowl {
         System.out.println("Добавили в миску " + howMuchAdd + " еды");
     }
 
-    public boolean minusFoodFromBowl(int howMuchMinus) {
+    public boolean minusFood(int howMuchMinus) {
         int remainFood = curFood - howMuchMinus;
         if (remainFood < 0) {
             return false;

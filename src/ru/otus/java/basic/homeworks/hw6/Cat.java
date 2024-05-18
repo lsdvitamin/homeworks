@@ -45,7 +45,7 @@ public class Cat {
             return;
         }
 
-        if (bowl.minusFoodFromBowl(appetit)) {
+        if (bowl.minusFood(appetit)) {
             wellFed = true;
             System.out.println("Кот " + nickname + " съел " + appetit + " еды");
             return;
