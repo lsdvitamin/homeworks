@@ -9,30 +9,6 @@ public class Cat {
     private int appetit;
     private boolean wellFed;
 
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
-
-    public int getAppetit() {
-        return appetit;
-    }
-
-    public void setAppetit(int appetit) {
-        this.appetit = appetit;
-    }
-
-    public boolean isWellFed() {
-        return wellFed;
-    }
-
-    public void setWellFed(boolean wellFed) {
-        this.wellFed = wellFed;
-    }
-
     public Cat(String nickname, int appetit) {
         this.nickname = nickname;
         this.appetit = appetit;
