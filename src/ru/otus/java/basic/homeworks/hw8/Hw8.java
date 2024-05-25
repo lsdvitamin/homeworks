@@ -50,7 +50,7 @@ public class Hw8 {
      * Проверка массива на то что он квадратный
      * @param arr2d Проверяемый массив
      * @param checkCnt Сколько элементов должна быть каждая сторона квадрата массива
-     * @return
+     * @return Вернет true если массив квадратный и равен checkCnt. Иначе - false
      */
     public static boolean checkArrSquare(String[][] arr2d, int checkCnt) {
         if (arr2d == null || arr2d.length == 0) {
