@@ -13,21 +13,9 @@ public class Persone implements Movable{
         return power;
     }
 
-    public String getNAME() {
-        return NAME;
-    }
-
     public Persone(String name, int power) {
         this.NAME = name;
         this.power = power;
-    }
-
-    public Transport getCurrentTransport() {
-        return currentTransport;
-    }
-
-    public void setCurrentTransport(Transport currentTransport) {
-        this.currentTransport = currentTransport;
     }
 
     public boolean getIn(Transport transport) {
