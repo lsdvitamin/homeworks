@@ -12,6 +12,7 @@ public class Cat extends Animal {
         this.remainDurability = durability;
     }
 
+
     @Override
     public int swim(int distance) {
         System.out.println(name + " не умеет плавать");
