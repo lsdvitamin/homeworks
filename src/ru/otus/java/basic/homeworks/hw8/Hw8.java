@@ -6,11 +6,13 @@ package ru.otus.java.basic.homeworks.hw8;
  */
 public class Hw8 {
     public static void coreHomework8() {
-        String[][] arr2d = {{"1", "5", "6", "4" }, {"2", "6", "3", "8" }, {"f", "4", "9", "1" }, {"0", "4", "9", "3" }};
+        String[][] arr2d = {{"1", "5", "6", "4" }, {"2", "6", "3", "8" }, {"2", "4", "9", "1" }, {"0", "4", "9", "3" }};
+        //String[][] arr2d = {{"1", "5", "6", "4" }, {"2", "6", "3", "8", "8" }, {"2", "4", "9", "1" }, {"0", "4", "9", "3" }};
+        //String[][] arr2d = {{"1", "5", "6", "4" }, {"2", "6", "3", "qwerty" }, {"2", "4", "9", "1" }, {"0", "4", "9", "3" }};
         try {
             System.out.println("Сумма элементов массива = " + summArray(arr2d));
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
