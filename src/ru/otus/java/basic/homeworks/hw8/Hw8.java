@@ -1,5 +1,7 @@
 package ru.otus.java.basic.homeworks.hw8;
 
+import java.util.Arrays;
+
 /**
  * @author Sergei on 25.05.2024 15:58.
  * @progect homeworks
@@ -13,8 +15,6 @@ public class Hw8 {
             System.out.println(e.getMessage() + " в ячейке " + e.getRow() + ":" + e.getCol());
         } catch (AppArraySizeException e) {
             System.out.println("Массив не 4X4");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -25,7 +25,7 @@ public class Hw8 {
      * @return Сумма элементов массива
      * @throws Exception
      */
-    public static int summArray(String[][] arr2d) throws Exception {
+    public static int summArray(String[][] arr2d) throws AppArrayDataException, AppArraySizeException {
         int sum = 0;
         int row = 0;
         int col = 0;
@@ -55,18 +55,7 @@ public class Hw8 {
      * @return Вернет true если массив квадратный и равен checkCnt. Иначе - false
      */
     public static boolean checkArrSquare(String[][] arr2d, int checkCnt) {
-        if (arr2d == null || arr2d.length == 0) {
-            return false;
-        }
-        int firstRowCnt = arr2d.length;
-        if (firstRowCnt != checkCnt) {
-            return false;
-        }
-        for (int i = 0; i < arr2d.length; i++) {
-            if (arr2d[i].length != checkCnt) {
-                return false;
-            }
-        }
-        return true;
+        //Это решение преподавателя, мое было гораздо длиннее. Надо разобраться как работает!!!
+        return arr2d != null && arr2d.length == 4 && Arrays.stream(arr2d).allMatch(row -> row.length == checkCnt);
     }
 }
