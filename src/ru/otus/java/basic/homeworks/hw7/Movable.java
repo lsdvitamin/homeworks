@@ -5,8 +5,9 @@ package ru.otus.java.basic.homeworks.hw7;
  * @progect homeworks
  */
 public interface Movable {
-    default boolean move(int distance, Location location){
+    default boolean move(int distance, Location location) {
         System.out.println("Иду пешком " + distance + " км. по " + location);
-        return  true;
-    };
+        return true;
+    }
+
 }

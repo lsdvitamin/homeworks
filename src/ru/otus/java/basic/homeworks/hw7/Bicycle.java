@@ -13,6 +13,7 @@ public class Bicycle implements Movable {
         this.powerConsumption = powerConsumption;
     }
 
+    @Override
     public boolean move(int distance, Location location) {
         if (location.equals(Location.SWAMP)) {
             System.out.println("Велосипед не может ехать по " + location);

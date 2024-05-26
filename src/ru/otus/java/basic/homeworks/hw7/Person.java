@@ -4,8 +4,8 @@ package ru.otus.java.basic.homeworks.hw7;
  * @author Sergei on 18.05.2024 13:04.
  * @progect homeworks
  */
-public class Persone implements Movable{
-    private final String NAME;
+public class Person implements Movable{
+    public final String NAME;
     private Transport currentTransport;
     private int power;
 
@@ -13,7 +13,7 @@ public class Persone implements Movable{
         return power;
     }
 
-    public Persone(String name, int power) {
+    public Person(String name, int power) {
         this.NAME = name;
         this.power = power;
     }
@@ -25,7 +25,7 @@ public class Persone implements Movable{
             return true;
         }
         System.out.println(NAME + " уже на " + currentTransport);
-        return true;
+        return false;
     }
 
     public boolean getOut() {

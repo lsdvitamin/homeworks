@@ -10,7 +10,7 @@ public enum Transport {
     BICYCLE(2),
     ROVER(3);
 
-    public int codTransport;
+    private int codTransport;
 
     Transport(int codTransport) {
         this.codTransport = codTransport;

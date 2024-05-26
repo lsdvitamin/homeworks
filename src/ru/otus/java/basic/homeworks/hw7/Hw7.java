@@ -12,7 +12,7 @@ public class Hw7 {
         Horse horse;
         Movable mover;
 
-        Persone bob = new Persone("Bob", 100);
+        Person bob = new Person("Bob", 100);
         System.out.println("------------------------------------");
         bob.getOut();
         mover = bob;
