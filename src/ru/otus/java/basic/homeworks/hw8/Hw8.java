@@ -20,6 +20,7 @@ public class Hw8 {
 
     /**
      * Подсчет всех суммы всех элементов квадратного массива
+     *
      * @param arr2d Двумерный массив
      * @return Сумма элементов массива
      * @throws Exception
@@ -48,7 +49,8 @@ public class Hw8 {
 
     /**
      * Проверка массива на то что он квадратный
-     * @param arr2d Проверяемый массив
+     *
+     * @param arr2d    Проверяемый массив
      * @param checkCnt Сколько элементов должна быть каждая сторона квадрата массива
      * @return Вернет true если массив квадратный и равен checkCnt. Иначе - false
      */
@@ -56,7 +58,7 @@ public class Hw8 {
         if (arr2d == null || arr2d.length == 0) {
             return false;
         }
-        int firstRowCnt = arr2d[0].length;
+        int firstRowCnt = arr2d.length;
         if (firstRowCnt != checkCnt) {
             return false;
         }
