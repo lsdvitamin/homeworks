@@ -1,7 +1,6 @@
 package ru.otus.java.basic.homeworks.Hw9;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
