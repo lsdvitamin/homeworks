@@ -1,6 +1,7 @@
 package ru.otus.java.basic.homeworks.Hw9;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -13,21 +14,21 @@ public class Hw9 {
         List<String> arrayListStr = new ArrayList<>();
         List<Employee> employees = new ArrayList<>();
         arrayList = creatreArrayList(1, 10);
+        System.out.println(arrayList);
         System.out.println("Сумма элементов: " + calcSumElementsOfArrayList(arrayList));
-        System.out.println("-------------------------------------");
         rewriteElementsOfArrayList(0, arrayList);
-        printArrayListInt(arrayList);
+        System.out.println(arrayList);
         plusElementsOfArrayList(10, arrayList);
-        printArrayListInt(arrayList);
+        System.out.println(arrayList);
         employees.add(new Employee("Petya", 20));
         employees.add(new Employee("Vasya", 23));
         employees.add(new Employee("Olya", 30));
         employees.add(new Employee("Victoria", 14));
         employees.add(new Employee("Ilia", 70));
         arrayListStr = createListOfName(employees);
-        printArrayListStr(arrayListStr);
+        System.out.println(arrayListStr);
         arrayListStr = searchEmplyeesOlderThan(employees, 30);
-        printArrayListStr(arrayListStr);
+        System.out.println(arrayListStr);
         System.out.println(checkAverageAge(employees, 35));
         System.out.println("Самый молодой сотрудник: " + getYoungerEmploee(employees).getNAME());
     }
@@ -85,30 +86,6 @@ public class Hw9 {
         for (int i = 0; i < arrayList.size(); i++) {
             arrayList.set(i, arrayList.get(i) + number);
         }
-    }
-
-    /**
-     * Выводит элементы числового списка в консоль
-     *
-     * @param arrayList
-     */
-    public static void printArrayListInt(List<Integer> arrayList) {
-        for (Integer element : arrayList) {
-            System.out.println(element);
-        }
-        System.out.println("-------------------------------------");
-    }
-
-    /**
-     * Выводит элементы строкового списка в консоль
-     *
-     * @param arrayList
-     */
-    public static void printArrayListStr(List<String> arrayList) {
-        for (String element : arrayList) {
-            System.out.println(element);
-        }
-        System.out.println("-------------------------------------");
     }
 
 
