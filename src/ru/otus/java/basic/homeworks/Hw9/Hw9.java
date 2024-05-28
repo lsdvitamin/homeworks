@@ -1,6 +1,7 @@
 package ru.otus.java.basic.homeworks.Hw9;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Sergei on 26.05.2024 9:38.
@@ -8,9 +9,9 @@ import java.util.ArrayList;
  */
 public class Hw9 {
     public static void coreHomework9() {
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        ArrayList<String> arrayListStr = new ArrayList<>();
-        ArrayList<Employee> employees = new ArrayList<>();
+        List<Integer> arrayList = new ArrayList<>();
+        List<String> arrayListStr = new ArrayList<>();
+        List<Employee> employees = new ArrayList<>();
         arrayList = creatreArrayList(1, 10);
         System.out.println("Сумма элементов: " + calcSumElementsOfArrayList(arrayList));
         System.out.println("-------------------------------------");
@@ -38,13 +39,11 @@ public class Hw9 {
      * @param max Максимальное значение
      * @return Возвращает arrayList
      */
-    public static ArrayList<Integer> creatreArrayList(int min, int max) {
-        ArrayList<Integer> arrayList = new ArrayList<>();
+    public static List<Integer> creatreArrayList(int min, int max) {
+        List<Integer> arrayList = new ArrayList<>();
         for (int i = min; i <= max; i++) {
-            System.out.println(i);
             arrayList.add(i);
         }
-        System.out.println("-------------------------------------");
         return arrayList;
     }
 
@@ -54,7 +53,7 @@ public class Hw9 {
      * @param arrayList Список целых значений
      * @return сумма элементов
      */
-    public static int calcSumElementsOfArrayList(ArrayList<Integer> arrayList) {
+    public static int calcSumElementsOfArrayList(List<Integer> arrayList) {
         int sum = 0;
         for (Integer element : arrayList) {
             if (element > 5) {
@@ -70,7 +69,7 @@ public class Hw9 {
      * @param number    Число, которым перезаписываются все элементы списка
      * @param arrayList Список arrayList
      */
-    public static void rewriteElementsOfArrayList(int number, ArrayList<Integer> arrayList) {
+    public static void rewriteElementsOfArrayList(int number, List<Integer> arrayList) {
         for (int i = 0; i < arrayList.size(); i++) {
             arrayList.set(i, number);
         }
@@ -82,7 +81,7 @@ public class Hw9 {
      * @param number    Число, на которое увеличиваются все элементы списка
      * @param arrayList Список arrayList
      */
-    public static void plusElementsOfArrayList(int number, ArrayList<Integer> arrayList) {
+    public static void plusElementsOfArrayList(int number, List<Integer> arrayList) {
         for (int i = 0; i < arrayList.size(); i++) {
             arrayList.set(i, arrayList.get(i) + number);
         }
@@ -93,7 +92,7 @@ public class Hw9 {
      *
      * @param arrayList
      */
-    public static void printArrayListInt(ArrayList<Integer> arrayList) {
+    public static void printArrayListInt(List<Integer> arrayList) {
         for (Integer element : arrayList) {
             System.out.println(element);
         }
@@ -105,7 +104,7 @@ public class Hw9 {
      *
      * @param arrayList
      */
-    public static void printArrayListStr(ArrayList<String> arrayList) {
+    public static void printArrayListStr(List<String> arrayList) {
         for (String element : arrayList) {
             System.out.println(element);
         }
@@ -119,8 +118,8 @@ public class Hw9 {
      * @param employees Список экземпляров работников
      * @return
      */
-    public static ArrayList<String> createListOfName(ArrayList<Employee> employees) {
-        ArrayList<String> listNames = new ArrayList<>();
+    public static List<String> createListOfName(List<Employee> employees) {
+        List<String> listNames = new ArrayList<>();
         for (Employee employee : employees) {
             listNames.add(employee.getNAME());
         }
@@ -135,8 +134,8 @@ public class Hw9 {
      * @param age       Возраст, с которого сотрудник попадет в результирующий список
      * @return
      */
-    public static ArrayList<String> searchEmplyeesOlderThan(ArrayList<Employee> employees, Integer age) {
-        ArrayList<String> listNames = new ArrayList<>();
+    public static List<String> searchEmplyeesOlderThan(List<Employee> employees, Integer age) {
+        List<String> listNames = new ArrayList<>();
         for (Employee employee : employees) {
             if (employee.getAGE() >= age) {
                 listNames.add(employee.getNAME());
@@ -152,34 +151,30 @@ public class Hw9 {
      * @param arg
      * @return
      */
-    public static boolean checkAverageAge(ArrayList<Employee> employees, Integer arg) {
+    public static boolean checkAverageAge(List<Employee> employees, Integer arg) {
         int sumAges = 0;
-        double averageAge = 0.0;
         for (Employee employee : employees) {
             sumAges += employee.getAGE();
         }
-        averageAge = sumAges / (double) employees.size();
-        if (averageAge > arg) {
-            return true;
-        }
-        return false;
+        return sumAges / (double) employees.size() > arg;
+
     }
 
     /**
      * Ищет самого молодого сторудника из списка и возвращает этот экземпляр
+     *
      * @param employees Список сотрудников
      * @return Экземпляр самого молодого сотрудника
      */
-    public static Employee getYoungerEmploee(ArrayList<Employee> employees) {
-        int minAge = 1000;
+    public static Employee getYoungerEmploee(List<Employee> employees) {
+        int minAge = employees.get(0).getAGE();
         Employee emploeeRes = null;
         for (Employee employee : employees) {
-            if (employee.getAGE() < minAge){
+            if (employee.getAGE() < minAge) {
                 minAge = employee.getAGE();
                 emploeeRes = employee;
             }
         }
-        System.out.println("-------------------------------------");
         return emploeeRes;
     }
 
