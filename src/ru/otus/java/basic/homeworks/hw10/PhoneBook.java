@@ -10,13 +10,10 @@ import java.util.Map;
  * @progect homeworks
  */
 public class PhoneBook {
-    private Map<String, ArrayList<String>> phoneBook = new HashMap<>();
+    private Map<String, ArrayList<String>> phoneDirectory = new HashMap<>();
 
     public PhoneBook(Map<String, ArrayList<String>> phoneBook) {
-        this.phoneBook = phoneBook;
-    }
-
-    public PhoneBook(String petrov, List<String> phones) {
+        this.phoneDirectory = phoneBook;
     }
 
     /**
@@ -28,7 +25,7 @@ public class PhoneBook {
     public void createNewContact(String lastName, String phone) {
         List<String> phones = new ArrayList<>();
         phones.add(phone);
-        phoneBook.put(lastName, (ArrayList<String>) phones);
+        phoneDirectory.put(lastName, (ArrayList<String>) phones);
     }
 
     /**
@@ -37,11 +34,8 @@ public class PhoneBook {
      * @param lastName Фамилия
      * @return Результат, если есть, то вернет true, иначе false
      */
-    public boolean containslastName(String lastName) {
-        if (phoneBook.containsKey(lastName)) {
-            return true;
-        }
-        return false;
+    public boolean containsLastName(String lastName) {
+        return phoneDirectory.containsKey(lastName);
     }
 
     /**
@@ -51,8 +45,7 @@ public class PhoneBook {
      * @return Результат, если есть, то вернет true, иначе false
      */
     public boolean containsPhoneNumber(String phone) {
-        List<String> phones = new ArrayList<>();
-        for (Map.Entry<String, ArrayList<String>> lastName : phoneBook.entrySet()) {
+        for (Map.Entry<String, ArrayList<String>> lastName : phoneDirectory.entrySet()) {
             if (lastName.getValue().contains(phone)) {
                 return true;
             }
@@ -69,24 +62,24 @@ public class PhoneBook {
      * @param phone    Номер телефона
      */
     public void add(String lastName, String phone) {
-        if (containslastName(lastName)) {
-            ArrayList phones = this.phoneBook.get(lastName);
+        if (containsLastName(lastName)) {
+            List phones = this.phoneDirectory.get(lastName);
             phones.add(phone);
-            this.phoneBook.put(lastName, phones);
-        } else if (this.phoneBook.size() == 0 || !containslastName(lastName)) {
+            this.phoneDirectory.put(lastName, (ArrayList<String>) phones);
+        } else if (this.phoneDirectory.size() == 0 || !containsLastName(lastName)) {
             createNewContact(lastName, phone);
         }
     }
 
     public void print() {
-        for (Map.Entry<String, ArrayList<String>> lastName : phoneBook.entrySet()) {
+        for (Map.Entry<String, ArrayList<String>> lastName : phoneDirectory.entrySet()) {
             System.out.print(lastName.getKey() + ": ");
             System.out.println(lastName.getValue());
         }
     }
 
-    public ArrayList<String> find(String lastName) {
-        return phoneBook.get(lastName);
+    public List<String> find(String lastName) {
+        return phoneDirectory.get(lastName);
     }
 
 }
