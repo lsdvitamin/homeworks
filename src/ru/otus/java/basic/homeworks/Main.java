@@ -2,12 +2,15 @@ package ru.otus.java.basic.homeworks;
 
 import static ru.otus.java.basic.homeworks.Util.inputNumber;
 import static ru.otus.java.basic.homeworks.hw1.Hw1.coreHomework1;
-import static ru.otus.java.basic.homeworks.hw10.Hw10.coreHomework10;
 import static ru.otus.java.basic.homeworks.hw2.Hw2.coreHomework2;
 import static ru.otus.java.basic.homeworks.hw3.Hw3.coreHomework3;
 import static ru.otus.java.basic.homeworks.hw4.Hw4.coreHomework4;
 import static ru.otus.java.basic.homeworks.hw5.Hw5.coreHomework5;
 import static ru.otus.java.basic.homeworks.hw6.Hw6.coreHomework6;
+import static ru.otus.java.basic.homeworks.hw7.Hw7.coreHomework7;
+import static ru.otus.java.basic.homeworks.hw8.Hw8.coreHomework8;
+import static ru.otus.java.basic.homeworks.Hw9.Hw9.coreHomework9;
+import static ru.otus.java.basic.homeworks.hw10.Hw10.coreHomework10;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,6 +30,12 @@ public class Main {
                 coreHomework5();
             } else if (numberOfHomework == 6) {
                 coreHomework6();
+            } else if (numberOfHomework == 7) {
+                coreHomework7();
+            } else if (numberOfHomework == 8) {
+                coreHomework8();
+            }  else if (numberOfHomework == 9) {
+                coreHomework9();
             } else if (numberOfHomework == 10) {
                 coreHomework10();
             } else if (numberOfHomework == 99) {
