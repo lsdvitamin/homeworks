@@ -11,12 +11,13 @@ import static ru.otus.java.basic.homeworks.hw7.Hw7.coreHomework7;
 import static ru.otus.java.basic.homeworks.hw8.Hw8.coreHomework8;
 import static ru.otus.java.basic.homeworks.Hw9.Hw9.coreHomework9;
 import static ru.otus.java.basic.homeworks.hw10.Hw10.coreHomework10;
+import static ru.otus.java.basic.homeworks.hw11.Hw11.coreHomework11;
 
 public class Main {
     public static void main(String[] args) {
         int numberOfHomework = 0;
         while (numberOfHomework != 99) {
-            System.out.print("\nВведите номер ДЗ(1-10)  /99-выход/: ");
+            System.out.print("\nВведите номер ДЗ(1-11)  /99-выход/: ");
             numberOfHomework = inputNumber();
             if (numberOfHomework == 1) {
                 coreHomework1();
@@ -38,6 +39,8 @@ public class Main {
                 coreHomework9();
             } else if (numberOfHomework == 10) {
                 coreHomework10();
+            } else if (numberOfHomework == 11) {
+                coreHomework11();
             } else if (numberOfHomework == 99) {
                 System.out.println("Выход");
             } else {
