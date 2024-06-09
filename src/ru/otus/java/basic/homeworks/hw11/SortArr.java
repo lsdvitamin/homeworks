@@ -40,7 +40,7 @@ public class SortArr {
                 numOfElem = i;
             }
         }
-        if (since == array.length-1) {
+        if (since == array.length - 1) {
             return;
         }
         swap = array[since];

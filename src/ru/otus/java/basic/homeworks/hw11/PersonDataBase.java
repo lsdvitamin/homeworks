@@ -19,12 +19,7 @@ public class PersonDataBase {
     }
 
     public Person findById(Long id) {
-        for (Person person : this.persons) {
-            if (person.id.equals(id)) {
-                return person;
-            }
-        }
-        return null;
+        return persons.get(Math.toIntExact(id - 1));
     }
 
     public boolean isManager(Person person) {

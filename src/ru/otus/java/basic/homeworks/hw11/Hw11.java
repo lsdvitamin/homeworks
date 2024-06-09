@@ -20,8 +20,8 @@ public class Hw11 {
         personDataBase.add(person2);
         personDataBase.add(person3);
         personDataBase.findById(3L).print();
-        System.out.println(personDataBase.isManager(person2));
-        System.out.println(personDataBase.isEmployee(person3));
+        System.out.println("Is person2 manager: " + personDataBase.isManager(person2));
+        System.out.println("Is person2 employee: " + personDataBase.isEmployee(person2));
 
         System.out.println();
         SortArr newSortBubble = new SortArr(new Integer[]{20, 15, 25, 14, 6, 7, 4, 8, 3, 5});
