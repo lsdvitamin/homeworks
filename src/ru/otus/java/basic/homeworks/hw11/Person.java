@@ -15,6 +15,10 @@ public class Person {
         this.id = id;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public void print() {
         System.out.println("ID: " + id + "\nNAME: " + name + "\nPOSITION: " + position);
     }

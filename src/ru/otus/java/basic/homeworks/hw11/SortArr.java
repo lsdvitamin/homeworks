@@ -29,7 +29,6 @@ public class SortArr {
     }
 
 
-    //{20, 15, 25, 14, 6, 7, 4, 8, 3, 5}
     public void quickSort(Integer[] array, Integer since) {
         Integer min = array[since];
         Integer swap;
