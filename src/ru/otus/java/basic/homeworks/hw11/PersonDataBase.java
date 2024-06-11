@@ -1,7 +1,6 @@
 package ru.otus.java.basic.homeworks.hw11;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author Sergei on 06.06.2024 15:04.
@@ -16,6 +15,7 @@ public class PersonDataBase {
 
     /**
      * Добавляет человека в список
+     *
      * @param person экземпляр человека
      */
     public void add(Person person) {
@@ -24,6 +24,7 @@ public class PersonDataBase {
 
     /**
      * Поиск человека в списке по ID
+     *
      * @param id идентификатор человека
      * @return
      */
@@ -33,11 +34,13 @@ public class PersonDataBase {
 
     /**
      * Проверяет, является ли человек менеджером. Если да, то вернет true, иначе false
+     *
      * @param person
      * @return
      */
     public boolean isManager(Person person) {
-        if (String.valueOf(person.position).contains("MANAGER|DIRECTOR|BRANCH_DIRECTOR|SENIOR_MANAGER")) {
+        Set<String> managerPosSet = new HashSet<>(Arrays.asList("MANAGER", "DIRECTOR", "BRANCH_DIRECTOR", "SENIOR_MANAGER"));
+        if (managerPosSet.contains(person.position)) {
             return true;
         }
         return false;
@@ -45,11 +48,13 @@ public class PersonDataBase {
 
     /**
      * Проверяет, является ли человек рабочим. Если да, то вернет true, иначе false
+     *
      * @param person
      * @return
      */
     public boolean isEmployee(Person person) {
-        if (!String.valueOf(person.position).contains("MANAGER|DIRECTOR|BRANCH_DIRECTOR|SENIOR_MANAGER")) {
+        Set<String> managerPosSet = new HashSet<>(Arrays.asList("MANAGER", "DIRECTOR", "BRANCH_DIRECTOR", "SENIOR_MANAGER"));
+        if (!managerPosSet.contains(person.position)) {
             return true;
         }
         return false;
