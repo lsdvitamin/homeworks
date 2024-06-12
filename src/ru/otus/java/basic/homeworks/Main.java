@@ -1,9 +1,8 @@
 package ru.otus.java.basic.homeworks;
 
+import java.io.IOException;
+
 import static ru.otus.java.basic.homeworks.Util.inputNumber;
-import static ru.otus.java.basic.homeworks.hw3.Hw3.coreHomework3;
-import static ru.otus.java.basic.homeworks.hw5.Hw5.coreHomework5;
-import static ru.otus.java.basic.homeworks.hw7.Hw7.coreHomework7;
 import static ru.otus.java.basic.homeworks.hw10.Hw10.coreHomework10;
 import static ru.otus.java.basic.homeworks.hw11.Hw11.coreHomework11;
 import static ru.otus.java.basic.homeworks.hw12.Hw12.coreHomework12;
@@ -13,9 +12,12 @@ import static ru.otus.java.basic.homeworks.hw15.Hw15.coreHomework15;
 import static ru.otus.java.basic.homeworks.hw16.Hw16.coreHomework16;
 import static ru.otus.java.basic.homeworks.hw17.Hw17.coreHomework17;
 import static ru.otus.java.basic.homeworks.hw19.Hw19.coreHomework19;
+import static ru.otus.java.basic.homeworks.hw3.Hw3.coreHomework3;
+import static ru.otus.java.basic.homeworks.hw5.Hw5.coreHomework5;
+import static ru.otus.java.basic.homeworks.hw7.Hw7.coreHomework7;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int numberOfHomework = 0;
         while (numberOfHomework != 99) {
             System.out.print("\nВведите номер ДЗ(1-19)  /99-выход/: ");
@@ -36,7 +38,7 @@ public class Main {
                 coreHomework13();
             } else if (numberOfHomework == 14) {
                 coreHomework14();
-            }  else if (numberOfHomework == 15) {
+            } else if (numberOfHomework == 15) {
                 coreHomework15();
             } else if (numberOfHomework == 16) {
                 coreHomework16();
