@@ -1,34 +1,28 @@
 package ru.otus.java.basic.homeworks.hw3;
 
-import java.util.Arrays;
-
 import static ru.otus.java.basic.homeworks.Util.inputNumber;
 
 public class Hw3 {
     public static void coreHomework3() {
-        System.out.println("----------------Домашнее задание #3-----------------");
+        System.out.println("----------------Домашнее задание #1-----------------");
         int numberOfMethod = 1;
         while (numberOfMethod != 0) {
-            System.out.print("\nВведите номер метода для ДЗ-3(1-5)  /0-к выбору ДЗ/: ");
+            int number1 = (int) (Math.random() * 40) - 20;
+            int number2 = (int) (Math.random() * 40) - 20;
+            int number3 = (int) (Math.random() * 40) - 20;
+            boolean increment = number3 > 0;
+            System.out.print("\nВведите номер метода для ДЗ-1(1-5)  /0-к выбору ДЗ/: ");
             numberOfMethod = inputNumber();
             if (numberOfMethod == 1) {
-                int[][] arr2d = {{-2, 7, 3, 14, 6, 44, 6, -77}, {8, 2, 0, -14, 12, 8}, {44, 6, 10, 20, -5}};
-                System.out.println("Сумма, элементов массива " + Arrays.deepToString(arr2d) + " больше 0 = " +
-                        getSumOfPositiveElrments(arr2d));
+                greetings();
             } else if (numberOfMethod == 2) {
-                printSquare(7);
+                checkSign(number1, number2, number3);
             } else if (numberOfMethod == 3) {
-                int[][] arrSquare = {{1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}, {1, 2, 3, 4, 5}};
-                getResetToZeroElementsOfArray(arrSquare);
+                selectColor();
             } else if (numberOfMethod == 4) {
-                int[][] arr2d = {{45, 0, 20, 4, -10, 54, 100, 777, 5, 47}, {32, 5, 0, -1, 14}, {7, -12, 47, 56, 22, 4, 0, 1, 44}};
-                System.out.println("Максимальный элемент массива " + Arrays.deepToString(arr2d) + " = " +
-                        getMaxElementFromArray(arr2d));
+                compareNumbers();
             } else if (numberOfMethod == 5) {
-                //int[][] arr2d = {{45, 0, 20, 4, -10, 54, 100, 777, 5, 47}};
-                //int[][] arr2d = {{45, 0, 20, 4, -10, 54, 100, 777, 5, 47},{}};
-                int[][] arr2d = {{45, 0, 20, 4, -10, 54, 100, 777, 5, 47}, {32, 8, 0, -1, -19}, {7, -12, 47, 56, 22, 4, 0, 1, 44}};
-                System.out.println("Результат: " + getCalcSumAllElemensSecondRow(arr2d));
+                addOrSubtractAndPrint(number1, number2, increment);
             } else if (numberOfMethod == 0) {
                 System.out.println("к выбору ДЗ");
             } else {
@@ -38,79 +32,59 @@ public class Hw3 {
         }
     }
 
-    //Метод 5. Считает и возвращает сумму всех элементов второй строки массива. Если второй строки нет, то вернет -1
-    private static int getCalcSumAllElemensSecondRow(int[][] arr2d) {
-        if (arr2d.length < 2) {
-            return -1;
-        }
-        int sum = 0;
-        for (int j = 0; j < arr2d[1].length; j++) {
-            sum += arr2d[1][j];
-        }
-        return sum;
+    //Метод 1. Выводит четыре слова в виде столбца
+    public static void greetings() {
+        System.out.println("Hello\nWorld\nfrom\nJava");
+        System.out.println("-----------------------------------------------");
     }
 
-    //Метод 4. Находит и возвращает максимальный элемент массива
-    private static int getMaxElementFromArray(int[][] arr2d) {
-        int maxElement = arr2d[0][0];
-        for (int i = 0; i < arr2d.length; i++) {
-            for (int j = 0; j < arr2d[i].length; j++) {
-                if (arr2d[i][j] > maxElement) {
-                    maxElement = arr2d[i][j];
-                }
-            }
+
+    //Метод 2. Проверяет положительная ли сумма или отрицательная, выводит результат
+    public static void checkSign(int a, int b, int c) {
+        int result = a + b + c;
+        if (result >= 0) {
+            System.out.print("Сумма положительная");
+        } else {
+            System.out.print("Сумма отрицательная");
         }
-        return maxElement;
+        System.out.println(" (Аргументы: " + a + "; " + b + "; " + c + ")");
+        System.out.println("-----------------------------------------------");
     }
 
-    //Метод 3. Зануляет все элементы массива по обеим диагоналям
-    private static void getResetToZeroElementsOfArray(int[][] arrSquare) {
-        System.out.println("Исходный массив:");
-        for (int i = 0; i < arrSquare.length; i++) {
-            for (int j = 0; j < arrSquare[i].length; j++) {
-                System.out.print(arrSquare[i][j] + "  ");
-            }
-            System.out.println();
-        }
 
-        for (int i = 0; i < arrSquare.length; i++) {
-            arrSquare[i][i] = 0;
-            arrSquare[arrSquare.length - i - 1][i] = 0;
+    //Метод 3. Определяет цвет в зависимости от значения переменной data, выводит результат
+    public static void selectColor() {
+        int data = 15;
+        if (data <= 10) {
+            System.out.println("Красный");
+        } else if (data > 20) {
+            System.out.println("Зеленый");
+        } else {
+            System.out.println("Желтый");
         }
-
-        System.out.println("Занулённый массив:");
-        for (
-                int i = 0;
-                i < arrSquare.length; i++) {
-            for (int j = 0; j < arrSquare[i].length; j++) {
-                System.out.print(arrSquare[i][j] + "  ");
-            }
-            System.out.println();
-        }
-
+        System.out.println("-----------------------------------------------");
     }
 
-    //Метод 2. Печатает квадрат из звездочек с количеством сторон равный lengthSides
-    private static void printSquare(int lengthSides) {
-        for (int i = 0; i < lengthSides; i++) {
-            for (int j = 0; j < lengthSides; j++) {
-                System.out.print("*  ");
-            }
-            System.out.println();
+
+    //Метод 4. Сравнивает значения a и b, выводит результат
+    public static void compareNumbers() {
+        int a = 10;
+        int b = 20;
+        if (a >= b) {
+            System.out.println("a >= b");
+        } else {
+            System.out.println("a < b");
         }
+        System.out.println("-----------------------------------------------");
     }
 
-    //Метод 1. Считает и возвращает сумму всех элементов массива, которые больше 0
-    private static int getSumOfPositiveElrments(int[][] arr2d) {
-        int sum = 0;
-        for (int i = 0; i < arr2d.length; i++) {
-            for (int j = 0; j < arr2d[i].length; j++) {
-                if (arr2d[i][j] > 0) {
-                    sum += arr2d[i][j];
-                }
-            }
-        }
-        return sum;
+
+    //Метод 5. Считает сумму или разность a и b в зависимости от значения переменной increment, выводит результат
+    public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
+        int result = increment ? initValue + delta : initValue - delta;
+        System.out.print(result);
+        System.out.println(" (Аргументы: " + initValue + "; " + delta + "; " + increment + ")");
+        System.out.println("-----------------------------------------------");
     }
 
 }
