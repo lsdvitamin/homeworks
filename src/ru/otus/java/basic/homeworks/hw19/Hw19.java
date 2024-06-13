@@ -18,9 +18,8 @@ public class Hw19 {
 
         System.out.println("----------------Домашнее задание #19-----------------");
 
-        String directoryPath = "C:\\OTUS\\java\\homeworks\\src\\ru\\otus\\java\\basic\\homeworks\\hw19";
-
-        File path = new File(directoryPath);
+        File path = new File("src", "files");
+        String directoryPath = path.getAbsolutePath();
 
         FilenameFilter txtFilter = new FilenameFilter() {
             public boolean accept(File path, String name) {
@@ -37,7 +36,7 @@ public class Hw19 {
 
         System.out.print("Введите имя файла с которым будете работать: ");
         String choseFile;
-        Boolean correctFile;
+        boolean correctFile;
 
         do {
             choseFile = inputString();
@@ -49,14 +48,14 @@ public class Hw19 {
 
 
         System.out.println("Содержимое файла: ");
-        File file = new File(directoryPath + "\\" + choseFile);
+        File file = new File(directoryPath, choseFile);
 
         printFile(file);
 
         System.out.print("\nВведите фразу, которую хотите добавить в файл: ");
         String phrase = inputString();
 
-        if (addPhraseIntoFile(directoryPath + "\\" + choseFile, phrase)) {
+        if (addPhraseIntoFile(file, phrase)) {
             System.out.println("\nФраза успешно добавлена в конец файла\n");
         }
         printFile(file);

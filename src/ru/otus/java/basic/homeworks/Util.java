@@ -5,6 +5,10 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Util {
+
+    public Util() {
+    }
+
     /**
      * Запрашивает у пользователя ввод числа
      *
@@ -60,11 +64,14 @@ public class Util {
      * @param phrase - добавляемая фраза
      * @throws IOException
      */
-    public static boolean addPhraseIntoFile(String file, String phrase) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(file, true));
-        writer.append(phrase + "\n");
-        writer.close();
-        return true;
+    public static boolean addPhraseIntoFile(File file, String phrase) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+            writer.append(phrase + "\n");
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
 
@@ -74,11 +81,14 @@ public class Util {
      * @param file - файл
      * @throws IOException
      */
-    public static void printFile(File file) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = bufferedReader.readLine()) != null) {
-            System.out.println(line);
+    public static void printFile(File file) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
