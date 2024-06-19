@@ -12,7 +12,6 @@ import static ru.otus.java.basic.homeworks.hw15.Hw15.coreHomework15;
 import static ru.otus.java.basic.homeworks.hw16.Hw16.coreHomework16;
 import static ru.otus.java.basic.homeworks.hw17.Hw17.coreHomework17;
 import static ru.otus.java.basic.homeworks.hw19.Hw19.coreHomework19;
-import static ru.otus.java.basic.homeworks.hw20.Hw20.coreHomework20;
 import static ru.otus.java.basic.homeworks.hw3.Hw3.coreHomework3;
 import static ru.otus.java.basic.homeworks.hw5.Hw5.coreHomework5;
 import static ru.otus.java.basic.homeworks.hw7.Hw7.coreHomework7;
