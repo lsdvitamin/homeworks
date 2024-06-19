@@ -47,8 +47,6 @@ public class Main {
                 coreHomework17();
             } else if (numberOfHomework == 19) {
                 coreHomework19();
-            } else if (numberOfHomework == 20) {
-                coreHomework20();
             } else if (numberOfHomework == 99) {
                 System.out.println("Выход");
             } else {
