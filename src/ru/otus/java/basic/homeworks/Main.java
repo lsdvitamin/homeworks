@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         int numberOfHomework = 0;
         while (numberOfHomework != 99) {
-            System.out.print("\nВведите номер ДЗ(1-19)  /99-выход/: ");
+            System.out.print("\nВведите номер ДЗ(1-20)  /99-выход/: ");
             numberOfHomework = inputNumber();
             if (numberOfHomework == 3) {
                 coreHomework3();
