@@ -53,13 +53,14 @@ public class Hw21 {
         t2.start();
         t3.start();
         t4.start();
+        t1.join();
+        t2.join();
+        t3.join();
         t4.join();
 
         System.out.println("Время заполнения массива из " + arrayLen + " элементов в 4 потока: " +
                 (System.currentTimeMillis() - timeStart) + "ms");
 
-
-        //TimeUnit.SECONDS.sleep(20);
         System.out.println("Второй элемент: " + bigArrThread[1]);
         System.out.println("Последний элемент: " + bigArrThread[99_999_999]);
 
