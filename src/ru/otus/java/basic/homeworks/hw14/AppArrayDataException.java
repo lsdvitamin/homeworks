@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw14;
 
 /**
  * @author Sergei on 25.05.2024 19:12.
- * @progect homeworks
+ * @project homeworks
  */
 public class AppArrayDataException extends Exception {
     private int row;

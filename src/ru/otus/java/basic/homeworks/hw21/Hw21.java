@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw21;
 
 /**
  * @author Sergei on 21.06.2024 17:44.
- * @progect homeworks
+ * @project homeworks
  */
 public class Hw21 {
     public static void coreHomework21() throws InterruptedException {

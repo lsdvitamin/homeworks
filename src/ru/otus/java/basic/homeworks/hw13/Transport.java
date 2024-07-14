@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw13;
 
 /**
  * @author Sergei on 22.05.2024 20:02.
- * @progect homeworks
+ * @project homeworks
  */
 public enum Transport {
     CAR(0),

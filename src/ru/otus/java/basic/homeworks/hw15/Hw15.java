@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author Sergei on 26.05.2024 9:38.
- * @progect homeworks
+ * @project homeworks
  */
 public class Hw15 {
     public static void coreHomework15() {

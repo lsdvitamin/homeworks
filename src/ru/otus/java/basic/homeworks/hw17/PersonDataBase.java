@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * @author Sergei on 06.06.2024 15:04.
- * @progect homeworks
+ * @project homeworks
  */
 public class PersonDataBase {
     private Map<Long, Person> persons = new HashMap<>();

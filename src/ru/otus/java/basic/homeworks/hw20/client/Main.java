@@ -6,7 +6,7 @@ import static ru.otus.java.basic.homeworks.Util.inputString;
 
 /**
  * @author Sergei on 18.06.2024 15:02.
- * @progect homeworks
+ * @project homeworks
  */
 public class Main {
     public static void main(String[] args) throws ScriptException {

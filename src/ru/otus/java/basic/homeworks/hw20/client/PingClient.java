@@ -5,7 +5,7 @@ import java.net.Socket;
 
 /**
  * @author Sergei on 18.06.2024 14:33.
- * @progect homeworks
+ * @project homeworks
  */
 public class PingClient {
     private final DataInputStream in;

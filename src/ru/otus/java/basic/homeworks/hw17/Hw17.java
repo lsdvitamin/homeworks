@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author Sergei on 06.06.2024 15:23.
- * @progect homeworks
+ * @project homeworks
  */
 public class Hw17 {
 

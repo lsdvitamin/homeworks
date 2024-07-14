@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw17;
 
 /**
  * @author Sergei on 06.06.2024 15:01.
- * @progect homeworks
+ * @project homeworks
  */
 public class Person {
     String name;

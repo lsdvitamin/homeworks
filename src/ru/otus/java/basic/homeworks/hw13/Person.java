@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw13;
 
 /**
  * @author Sergei on 18.05.2024 13:04.
- * @progect homeworks
+ * @project homeworks
  */
 public class Person implements Movable{
     public final String NAME;

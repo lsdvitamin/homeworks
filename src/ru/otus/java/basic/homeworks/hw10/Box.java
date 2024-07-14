@@ -6,7 +6,7 @@ import static ru.otus.java.basic.homeworks.Util.inputString;
  * класс Коробка
  *
  * @author Sergei on 05.05.2024 18:04.
- * @progect homeworks
+ * @project homeworks
  */
 public class Box {
     private int length;

@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw12;
 
 /**
  * @author Sergei on 17.05.2024 15:59.
- * @progect homeworks
+ * @project homeworks
  */
 public class Hw12 {
     public static void coreHomework12() {

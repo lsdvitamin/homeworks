@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 /**
  * @author Sergei on 28.05.2024 16:43.
- * @progect homeworks
+ * @project homeworks
  */
 public class Hw16 {
 

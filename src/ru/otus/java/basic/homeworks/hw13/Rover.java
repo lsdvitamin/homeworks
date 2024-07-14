@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw13;
 
 /**
  * @author Sergei on 18.05.2024 13:07.
- * @progect homeworks
+ * @project homeworks
  */
 public class Rover implements Movable {
     private int fuelLevel;

@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * @author Sergei on 29.05.2024 14:33.
- * @progect homeworks
+ * @project homeworks
  */
 public class PhoneBook {
     private Map<String, ArrayList<String>> phoneDirectory = new HashMap<>();

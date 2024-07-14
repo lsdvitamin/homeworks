@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw11;
 
 /**
  * @author Sergei on 14.05.2024 8:50.
- * @progect homeworks
+ * @project homeworks
  */
 public class Cat extends Animal {
     public Cat(String name, int speedRun, int durability) {

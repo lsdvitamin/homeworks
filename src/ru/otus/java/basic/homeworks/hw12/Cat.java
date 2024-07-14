@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw12;
 
 /**
  * @author Sergei on 17.05.2024 16:01.
- * @progect homeworks
+ * @project homeworks
  */
 public class Cat {
     private String nickname;

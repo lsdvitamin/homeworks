@@ -8,7 +8,7 @@ import static ru.otus.java.basic.homeworks.Util.inputNumber;
  * класс Домашняя работа 4
  *
  * @author Sergei on 05.05.2024.
- * @progect homeworks
+ * @project homeworks
  */
 
 public class Hw10 {

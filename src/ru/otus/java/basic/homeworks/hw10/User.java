@@ -3,7 +3,7 @@ package ru.otus.java.basic.homeworks.hw10;
 /**
  * класс Пользователь
  * @author Sergei on 05.05.2024 14:24.
- * @progect homeworks
+ * @project homeworks
  */
 public class User {
     private String lastName;

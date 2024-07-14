@@ -10,7 +10,7 @@ import static ru.otus.java.basic.homeworks.Util.*;
 
 /**
  * @author Sergei on 11.06.2024 12:28.
- * @progect homeworks
+ * @project homeworks
  */
 public class Hw19 {
 

@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw17;
 
 /**
  * @author Sergei on 09.06.2024 11:22.
- * @progect homeworks
+ * @project homeworks
  */
 public class SortArr {
     Integer[] arr = new Integer[10];

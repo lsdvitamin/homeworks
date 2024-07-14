@@ -7,7 +7,7 @@ import static ru.otus.java.basic.homeworks.Util.eval;
 
 /**
  * @author Sergei on 18.06.2024 14:21.
- * @progect homeworks
+ * @project homeworks
  */
 public class PrintServer {
     public static void main(String[] args) throws IOException {

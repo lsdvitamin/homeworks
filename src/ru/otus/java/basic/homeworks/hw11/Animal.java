@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks.hw11;
 
 /**
  * @author Sergei on 14.05.2024 8:39.
- * @progect homeworks
+ * @project homeworks
  * @name Кличка животного
  * @speedRun Скорость с которой животьное может бежать
  * @speedSwim Скорость с которой животьное может плыть
