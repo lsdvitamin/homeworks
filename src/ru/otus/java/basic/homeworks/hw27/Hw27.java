@@ -2,10 +2,7 @@ package ru.otus.java.basic.homeworks.hw27;
 
 import ru.otus.java.basic.homeworks.Util;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -20,16 +17,21 @@ public class Hw27 {
         String fileName = Util.inputString();
         System.out.print("Введите искомую фразу: ");
         String phrase = Util.inputString();
-        try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(fileName))) {
-            byte[] bytes = bufferedInputStream.readAllBytes();
-            String data = new String(bytes, StandardCharsets.UTF_8);
-            System.out.println("В тексте :\n" + data);
-            System.out.println("\nфраза \"" + phrase + "\" встречается " + count(data, phrase) + " раз");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        File f = new File(fileName);
+        if (f.exists() && !f.isDirectory()) {
+            try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(fileName))) {
+                byte[] bytes = bufferedInputStream.readAllBytes();
+                String data = new String(bytes, StandardCharsets.UTF_8);
+                System.out.println("В тексте :\n" + data);
+                System.out.println("\nфраза \"" + phrase + "\" встречается " + count(data, phrase) + " раз");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                e.printStackTrace();
+                throw new RuntimeException(e);
+            }
+        } else System.out.println("Файл \"" + fileName + "\" не найден");
     }
 
     public static int count(String data, String phrase) {
