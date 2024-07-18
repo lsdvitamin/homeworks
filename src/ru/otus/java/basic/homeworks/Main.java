@@ -13,6 +13,8 @@ import static ru.otus.java.basic.homeworks.hw16.Hw16.coreHomework16;
 import static ru.otus.java.basic.homeworks.hw17.Hw17.coreHomework17;
 import static ru.otus.java.basic.homeworks.hw19.Hw19.coreHomework19;
 import static ru.otus.java.basic.homeworks.hw21.Hw21.coreHomework21;
+import static ru.otus.java.basic.homeworks.hw26.hw26.coreHomework26;
+import static ru.otus.java.basic.homeworks.hw27.Hw27.coreHomework27;
 import static ru.otus.java.basic.homeworks.hw3.Hw3.coreHomework3;
 import static ru.otus.java.basic.homeworks.hw5.Hw5.coreHomework5;
 import static ru.otus.java.basic.homeworks.hw7.Hw7.coreHomework7;
@@ -49,6 +51,10 @@ public class Main {
                 coreHomework19();
             } else if (numberOfHomework == 21) {
                 coreHomework21();
+            } else if (numberOfHomework == 26) {
+                coreHomework26();
+            } else if (numberOfHomework == 27) {
+                coreHomework27();
             } else if (numberOfHomework == 99) {
                 System.out.println("Выход");
             } else {
