@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class Hw28 {
 
-    private final static Object mon = new Object();
+    private static final Object mon = new Object();
     private static Integer stage = 0;
     private static Integer cnt = 0;
 
@@ -19,65 +19,60 @@ public class Hw28 {
     public static void coreHomework28() throws InterruptedException {
         System.out.println("----------------Домашнее задание #28-----------------");
 
-        for (int i = 0; i < 5; i++) {
-
-            executorService.execute(() -> {
-                while (true) synchronized (mon) {
-                    while (stage != 0) {
-                        try {
-                            mon.wait();
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
-                        }
+        executorService.execute(() -> {
+            while (true) synchronized (mon) {
+                while (stage != 0) {
+                    try {
+                        mon.wait();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
                     }
-                    stage = 1;
-                    System.out.print("A");
-                    mon.notifyAll();
                 }
-            });
+                stage = 1;
+                System.out.print("A");
+                mon.notifyAll();
+            }
+        });
 
-            executorService.execute(() -> {
-                while (true) synchronized (mon) {
-                    while (stage != 1) {
-                        try {
-                            mon.wait();
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
-                        }
+        executorService.execute(() -> {
+            while (true) synchronized (mon) {
+                while (stage != 1) {
+                    try {
+                        mon.wait();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
                     }
-                    stage = 2;
-                    System.out.print("B");
-                    mon.notifyAll();
                 }
-            });
+                stage = 2;
+                System.out.print("B");
+                mon.notifyAll();
+            }
+        });
 
-            executorService.execute(() -> {
-                while (true) synchronized (mon) {
-                    while (stage != 2) {
-                        try {
-                            mon.wait();
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
-                        }
+        executorService.execute(() -> {
+            while (true) synchronized (mon) {
+                while (stage != 2) {
+                    try {
+                        mon.wait();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
                     }
-                    stage = 0;
-                    cnt += 1;
-                    System.out.print("C");
-
-                    if (cnt == 5) {
-                        System.out.println("\nПечать в потоках завершена");
-                        break;
-                    } else {
-                        mon.notifyAll();
-                    }
-
                 }
-            });
+                stage = 0;
+                cnt += 1;
+                System.out.print("C");
 
-            executorService.shutdown();
-            executorService.awaitTermination(1, TimeUnit.DAYS);
+                if (cnt == 5) {
+                    System.out.println("\nПечать в потоках завершена");
+                    break;
+                }
+                mon.notifyAll();
+            }
+        });
 
-        }
+        executorService.shutdown();
+        executorService.awaitTermination(1, TimeUnit.DAYS);
+
     }
 }
 
