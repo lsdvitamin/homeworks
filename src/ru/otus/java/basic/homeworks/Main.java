@@ -24,7 +24,7 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         int numberOfHomework = 0;
         while (numberOfHomework != 99) {
-            System.out.print("\nВведите номер ДЗ(1-21)  /99-выход/: ");
+            System.out.print("\nВведите номер ДЗ(1-28)  /99-выход/: ");
             numberOfHomework = inputNumber();
             if (numberOfHomework == 3) {
                 coreHomework3();
